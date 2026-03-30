@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Landing Page</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">BrandName</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#buy" class="btn btn-primary">Buy Now</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Build something amazing.</h1>
+          <p>Launch your product with clarity and confidence. Our toolkit makes it easy.</p>
+          <a id="buy" class="btn btn-primary btn-large" href="#features">Buy Now</a>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <div class="illustration-card">🚀</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Fast Setup</h3>
+            <p>Get running in minutes with ready-made templates and smart defaults.</p>
+          </article>
+          <article class="card">
+            <h3>Fully Responsive</h3>
+            <p>Looks great on every screen. Our design scales beautifully across devices.</p>
+          </article>
+          <article class="card">
+            <h3>24/7 Support</h3>
+            <p>We’re here when you need us. Reach out anytime and get fast help.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Pricing</h2>
+        <p>Simple pricing plans that scale with your needs.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Have questions? Send us a message and we’ll respond ASAP.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> BrandName. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

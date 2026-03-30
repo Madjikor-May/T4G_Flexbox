@@ -1,0 +1,235 @@
+/* Global styles */
+:root {
+  --bg: #0b1220;
+  --surface: #0f172a;
+  --surface-2: #16223a;
+  --text: #e9efff;
+  --muted: #a6b0c3;
+  --primary: #4f46e5;
+  --primary-2: #6d28d9;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --radius: 14px;
+  --max-width: 1080px;
+  --gap: 1.25rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1e273f 0%, #070a13 85%);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(100% - 2rem, var(--max-width));
+  margin: 0 auto;
+}
+
+/* Sticky header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 18, 32, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 0;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  padding: 0.35rem 0.4rem;
+  border-radius: 999px;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.45);
+}
+
+.btn-large {
+  padding: 1rem 1.6rem;
+  font-size: 1.05rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4.5rem 0 5rem;
+  background: radial-gradient(circle at top, rgba(113, 71, 255, 0.3), transparent 65%),
+    radial-gradient(circle at 40% 25%, rgba(255, 255, 255, 0.12), transparent 55%),
+    var(--bg);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  margin: 0 0 0.8rem;
+  font-size: clamp(2.3rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
+}
+
+.hero-text p {
+  margin: 0 0 1.7rem;
+  max-width: 45ch;
+  color: var(--muted);
+}
+
+.hero-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration-card {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+}
+
+/* Features */
+.features {
+  padding: 4rem 0;
+}
+
+.features h2 {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.card {
+  padding: 1.8rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.section p {
+  text-align: center;
+  max-width: 52ch;
+  margin: 0 auto;
+  color: var(--muted);
+}
+
+/* Footer */
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 880px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+}
